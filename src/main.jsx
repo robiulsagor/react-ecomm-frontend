@@ -7,10 +7,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Shop from './pages/shop/Shop.jsx';
-import Men from './pages/men/Men.jsx';
-import Women from './pages/women/Women.jsx';
-import Kids from './pages/kids/Kids.jsx';
-import Cart from './pages/cart/Cart.jsx';
+import Product from './pages/product/Product.jsx';
+import ShopCategory from './pages/shop/Shop.jsx';
+import Cart from "./pages/cart/Cart.jsx"
+import LoginRegister from './pages/loginRegister/LoginRegister.jsx';
 
 
 const router = createBrowserRouter([
@@ -19,25 +19,33 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "shop",
+        path: "/",
         element: <Shop />
       },
       {
+        path: "product/:productId",
+        element: <Product />
+      },
+      {
         path: "men",
-        element: <Men />
+        element: <ShopCategory category="men" />
       },
       {
         path: "women",
-        element: <Women />
+        element: <ShopCategory category="women" />
       },
       {
         path: "kids",
-        element: <Kids />
+        element: <ShopCategory category="kids" />
       },
       {
         path: "cart",
         element: <Cart />
       },
+      {
+        path: "login",
+        element: <LoginRegister />
+      }
     ]
   },
 ]);
