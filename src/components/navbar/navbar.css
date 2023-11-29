@@ -1,0 +1,106 @@
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 16px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-logo img {
+    width: 60px;
+    display: inline-block;
+}
+
+.nav-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.nav-logo p span {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    color: #373737;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+}
+
+.nav-menu li::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background: var(--main-color);
+    transition: .2s;
+}
+
+.nav-menu li:hover::after, .nav-wrapper li.active::after {
+    width: 80%;
+}
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-login-cart img {
+    width: 32px;
+}
+
+.nav-login-cart button {
+    padding: .4rem 3rem;
+    border-radius: 20px;
+    font-size: 19px;
+    border: 1px solid #888;
+    background: white;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.nav-login-cart button:hover {
+    border: 1px solid var(--main-color);
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 22px;
+    height: 22px;
+    background: var(--main-color);
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.nav-login-cart div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
