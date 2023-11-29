@@ -6,13 +6,39 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Shop from './pages/shop/Shop.jsx';
+import Men from './pages/men/Men.jsx';
+import Women from './pages/women/Women.jsx';
+import Kids from './pages/kids/Kids.jsx';
+import Cart from './pages/cart/Cart.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-
+    children: [
+      {
+        path: "shop",
+        element: <Shop />
+      },
+      {
+        path: "men",
+        element: <Men />
+      },
+      {
+        path: "women",
+        element: <Women />
+      },
+      {
+        path: "kids",
+        element: <Kids />
+      },
+      {
+        path: "cart",
+        element: <Cart />
+      },
+    ]
   },
 ]);
 

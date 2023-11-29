@@ -43,7 +43,7 @@
     font-size: 20px;
 }
 
-.nav-menu li::after {
+.nav-menu li a::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -55,7 +55,7 @@
     transition: .2s;
 }
 
-.nav-menu li:hover::after, .nav-wrapper li.active::after {
+.nav-menu li a:hover::after, .nav-wrapper li a.active::after {
     width: 80%;
 }
 
